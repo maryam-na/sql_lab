@@ -49,7 +49,7 @@ FROM
 FROM
     sakila.film;   
 # 8- What's the average movie duration expressed in format (hours, minutes)?use sakila; 
-select avg(length),  concat(cast(floor(avg(length)/60) as char), " h, ", cast(floor(avg(length)% 60) as char)," m")  
+select avg(length),  concat(floor(avg(length)/60), " h, ", floor(avg(length)% 60)," m")  
  as average_duration 
 FROM sakila.film;
 
